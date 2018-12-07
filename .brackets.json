@@ -1,0 +1,7 @@
+{
+    "sly.serverUrl": "http://localhost:8000",
+    "sly.remoteUser": "admin",
+    "sly.remoteUserPassword": "admin",
+    "sly.acceptSelfSignedCertificates": false,
+    "sly.autoSync": false
+}

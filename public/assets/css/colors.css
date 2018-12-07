@@ -1,0 +1,85 @@
+/**********************
+
+Colors.css
+=============
+
+Author:  Gino Aliaj
+Template: Movify - Movies, Series & Cinema HTML Template
+
+Author URI: gnodesign.com
+***************************/
+
+
+/* --------------------------------------
+    MAIN COLOR === #9352b3
+-------------------------------------- */
+
+
+/* Color */
+a:hover,
+[type="checkbox"]:not(:checked)+label:after,
+[type="checkbox"]:checked+label:after,
+#main-nav .navbar-nav .dropdown-menu>li>a:hover,
+.signin-wrapper .bottom-links a,
+.signup-wrapper .bottom-links a,
+.forgetpassword-wrapper .bottom-links a,
+.pricing-table-2 .plan.featured .plan-price:before,
+.pagination ul li a:hover,
+.icon-box i,
+.icon-box2 i,
+.features-tab li a.active .icon-wrapper,
+.features-tab li a:hover .icon-wrapper,
+.contact-page .details-wrapper ul.contact-details li i,
+.bloglist-post-holder .bloglist-title a:hover,
+.blog-post .post-content a.read-more {
+    color: #9352b3;
+}
+
+
+/* Background */
+.owl-dots .owl-dot.active span,
+.loading .loading-effect .object,
+.btn-main,
+#backtotop a,
+.play-video,
+.pricing-table-2 .plan.featured .plan-price,
+.pagination ul li a.current-page,
+.pagination ul li a.current-page:hover,
+.layout-switcher a:hover,
+.layout-switcher a.active,
+.mm-counter {
+    background: #9352b3;
+}
+
+
+
+
+/* --------------------------------------
+    SECONDARY COLOR === #a11f3c
+-------------------------------------- */
+
+/* Color */
+.btn-second {
+    background: #a11f3c;
+}
+
+
+
+/* --------------------------------------
+    GRADIENT WITH MAIN & SECONDARY COLORS
+-------------------------------------- */
+
+.overlay-gradient .slotholder:after,
+.overlay-gradient:after,
+.blog-post .blog-thumb a:before,
+ul.blog-posts-widget .blog-content .blog-thumb a:before,
+.celebrity-list-1 .celebrity-image a:before,
+.celebrity-grid-1 .celebrity-image a:before,
+.bloglist-post-holder .bloglist-thumb-link .bloglist-post-thumbnail:after,
+.movie-box-1 .poster:before,
+.movie-detail-intro2 .movie-poster:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#a11f3c), to(#9352b3));
+    background: -webkit-linear-gradient(bottom, #9352b3 0%, #a11f3c 100%);
+    background: -o-linear-gradient(bottom, #9352b3 0%, #a11f3c 100%);
+    background: linear-gradient(to bottom, #a11f3c 0%, #9352b38c 100%);
+}
