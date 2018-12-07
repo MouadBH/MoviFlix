@@ -109,10 +109,7 @@ class MovieController extends Controller
         $movie->time = $request->input('time');
         $movie->director = $request->input('director');
         $movie->language = $request->input('lang');
-
-            $json = file_get_contents($request->input('sl'));
-            $data = json_decode($json,true);
-            $movie->stremlink = $data['files'][0];
+        $movie->stremlink = $request->input('sl');
 
         if($request->hasFile('sub')){
             $movie->subtitle = $request->sub->store('subtitle');
