@@ -17,7 +17,7 @@ Movies -
                 
                 <!-- Start of Movie List -->
                 <div class="row">
-                    @foreach($media as $movie)
+                    @forelse($media as $movie)
                     <!-- Movie List Item -->
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="movie-box-3 mb30">
@@ -54,14 +54,16 @@ Movies -
                                         <p>
                                            {{ str_limit($movie->story, $limit = 100, $end = '...')}}</p>
 
-                                        <a href="movie/{{ $movie->slug }}" class="btn btn-main btn-effect">Watch Now</a>
+                                        <a href="{{ url('movie/' . $movie->slug) }}" class="btn btn-main btn-effect">Watch Now</a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    @endforeach
+                    @empty
+                        <p>No Details found. Try to search again !</p>
+                    @endforelse
                 </div>
                 <!-- Start of Pagination -->
                 {{ $media->links() }}

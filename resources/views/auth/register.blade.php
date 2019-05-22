@@ -146,7 +146,7 @@
                 </div>
                 <!-- =============== END OF LOGIN & REGISTER POPUP =============== -->
 
-                <a href="index.html" class="text-white">Back to Home</a>
+                <a href="{{ url('/') }}" class="text-white">Back to Home</a>
 
             </div>
             </div>

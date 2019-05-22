@@ -64,21 +64,20 @@ class MovieController extends Controller
         
         }
     }
-    public function search($value='')
+    
+    public function search()
     {
-        if (!isset($_GET['search-keyword'])) {
-            return view('errors.404');
-        }
-        $search = $_GET['search-keyword'];
-
-        $items = Movie::where('title', 'like', '%' . $search . '%')->orderBy('id', 'DESC')->paginate(20);
-        if (count($items)) {
-            return view('movies', ['media' => $items]);
-        }else{
-            return view ('movies')->withMessage('No Details found. Try to search again !');
-        }
+        $keyWord = \Request::get('search-keyword') ? '%' . \Request::get('search-keyword') . '%' : null;
         
+        if (!$keyWord) {
+            return abort(404);
+        }
 
+        $movies = Movie::where('title', 'like', $keyWord)
+                        ->orderBy('id', 'DESC')
+                        ->paginate(20);
+        
+        return view('movies', ['media' => $movies]);
     }
     
     public function inMovies(){
